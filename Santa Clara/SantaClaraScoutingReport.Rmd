@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r, echo = FALSE, message = FALSE}
-setwd("~/Downloads")
+setwd("~/Downloads/WBB Scouting")
 
 # Comparison of Teams, Game by Game
 games = read.csv("LMU Data - Games.csv")
@@ -496,7 +496,65 @@ text(y[sc_idx] - 0.2,x[sc_idx] + 0.01,
      col = "indianred3")
 ```
 
+# Returning Production
 
+$\\$
+
+**Assessment:** Large chunk of assisting will
+come from elsewhere; otherwise,
+strong majority of production returning.
+
+```{r, echo = FALSE}
+wcc_players_sc = subset(wcc_players, wcc_players$Team == "Santa Clara")
+
+newplayers_sc = c("Quinsey Bryan",
+               "Aniya Hooker",
+               "Kate Schat",
+               "Sara Schmerbach",
+               "Maia Jones",
+               "Brooke Blachly",
+               "Ava Schmidt",
+               "Delainey Miller",
+               "Emma Najjuma",
+               "Reilly Clark",
+               "Kylee Fox",
+               "Joana Magalhaes",
+               "Tyler Gildersleeve-Stiles")
+
+wcc_players_sc$returner = wcc_players_sc$Player %in% newplayers_sc
+
+pl_return = mean(wcc_players_sc$returner)
+
+min_return = sum(wcc_players_sc$MP[wcc_players_sc$returner]) / 
+  sum(wcc_players_sc$MP)
+
+pts_return = sum(wcc_players_sc$PTS[wcc_players_sc$returner]) / 
+  sum(wcc_players_sc$PTS)
+
+ast_return = sum(wcc_players_sc$AST[wcc_players_sc$returner]) / 
+  sum(wcc_players_sc$AST)
+
+thp_return = sum(wcc_players_sc$X3P[wcc_players_sc$returner]) / 
+  sum(wcc_players_sc$X3P)
+
+drb_return = sum(wcc_players_sc$DRB[wcc_players_sc$returner]) / 
+  sum(wcc_players_sc$DRB)
+
+
+
+barplot(c(pl_return, min_return, 
+          pts_return, ast_return,
+          thp_return, drb_return),
+        col = "indianred3",
+        ylim = c(0, 1),
+        ylab = "Proportion",
+        main = "Proportion of Returning Production from 2025-26",
+        names.arg = c("Players", "Minutes", "Points", "Assists", 
+                      "3-FG", "DRBs"))
+box(bty = "l")
+abline(h = 0.6, lty = 2)
+abline(h = 0.8, lty = 2)
+```
 
 # Appendix
 
