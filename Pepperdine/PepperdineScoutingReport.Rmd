@@ -343,7 +343,7 @@ segments(x0 = y, y0 = 0,
 # label only Pepperdine
 sc_idx <- which(names(x) == "Pepperdine")
 
-text(y[sc_idx],x[sc_idx] + 0.05,
+text(y[sc_idx],x[sc_idx] + 0.04,
      labels = "Pepperdine",
      cex = 1.15,
      col = "darkorange1")
@@ -370,7 +370,7 @@ segments(x0 = y, y0 = 0,
 # label only Pepperdine
 sc_idx <- which(names(x) == "Pepperdine")
 
-text(y[sc_idx] - 0.3, x[sc_idx] + 0.005,
+text(y[sc_idx] , x[sc_idx] + 0.005,
      labels = "Pepperdine",
      cex = 1.15,
      col = "darkorange1")
@@ -406,7 +406,7 @@ segments(x0 = y, y0 = 0,
 # label only Pepperdine
 sc_idx <- which(names(x) == "Pepperdine")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.05,
+text(y[sc_idx],x[sc_idx] + 0.05,
      labels = "Pepperdine",
      cex = 1.15,
      col = "darkorange1")
@@ -432,7 +432,7 @@ segments(x0 = y, y0 = 0,
 # label only Pepperdine
 sc_idx <- which(names(x) == "Pepperdine")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.01,
+text(y[sc_idx],x[sc_idx] + 0.01,
      labels = "Pepperdine",
      cex = 1.15,
      col = "darkorange1")
