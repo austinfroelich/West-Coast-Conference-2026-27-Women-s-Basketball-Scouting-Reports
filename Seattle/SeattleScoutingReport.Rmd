@@ -343,7 +343,7 @@ segments(x0 = y, y0 = 0,
 # label only Seattle
 sc_idx <- which(names(x) == "Seattle")
 
-text(y[sc_idx],x[sc_idx] + 0.05,
+text(y[sc_idx] + 0.2,x[sc_idx] + 0.05,
      labels = "Seattle",
      cex = 1.15,
      col = "red2")
@@ -370,7 +370,7 @@ segments(x0 = y, y0 = 0,
 # label only Seattle
 sc_idx <- which(names(x) == "Seattle")
 
-text(y[sc_idx] - 0.3, x[sc_idx] + 0.005,
+text(y[sc_idx], x[sc_idx] + 0.005,
      labels = "Seattle",
      cex = 1.15,
      col = "red2")
@@ -406,7 +406,7 @@ segments(x0 = y, y0 = 0,
 # label only Seattle
 sc_idx <- which(names(x) == "Seattle")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.05,
+text(y[sc_idx],x[sc_idx] + 0.05,
      labels = "Seattle",
      cex = 1.15,
      col = "red2")
@@ -432,7 +432,7 @@ segments(x0 = y, y0 = 0,
 # label only Seattle
 sc_idx <- which(names(x) == "Seattle")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.01,
+text(y[sc_idx],x[sc_idx] + 0.01,
      labels = "Seattle",
      cex = 1.15,
      col = "red2")
@@ -468,7 +468,7 @@ segments(x0 = y, y0 = 0,
 # label only Seattle
 sc_idx <- which(names(x) == "Seattle")
 
-text(y[sc_idx],x[sc_idx] + 0.075,
+text(y[sc_idx],x[sc_idx] + 0.05,
      labels = "Seattle",
      cex = 1.15,
      col = "red2")
@@ -494,7 +494,7 @@ segments(x0 = y, y0 = 0,
 # label only Seattle
 sc_idx <- which(names(x) == "Seattle")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.01,
+text(y[sc_idx],x[sc_idx] + 0.01,
      labels = "Seattle",
      cex = 1.15,
      col = "red2")
