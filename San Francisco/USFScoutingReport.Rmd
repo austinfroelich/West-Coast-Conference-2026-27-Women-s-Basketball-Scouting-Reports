@@ -339,11 +339,15 @@ segments(x0 = y, y0 = 0,
 # label only San Francisco
 sc_idx <- which(names(x) == "San Francisco")
 
-text(y[sc_idx],x[sc_idx] + 0.05,
-     labels = "San Francisco",
+text(y[sc_idx],x[sc_idx] + 0.07,
+     labels = "San",
      cex = 1.15,
      col = "forestgreen")
 
+text(y[sc_idx],x[sc_idx] + 0.04,
+     labels = "Francisco",
+     cex = 1.15,
+     col = "forestgreen")
 
 x = sort(divs_pts_Simpsons)
 y = 1:12
@@ -366,8 +370,13 @@ segments(x0 = y, y0 = 0,
 # label only San Francisco
 sc_idx <- which(names(x) == "San Francisco")
 
-text(y[sc_idx] - 0.3, x[sc_idx] + 0.005,
-     labels = "San Francisco",
+text(y[sc_idx],x[sc_idx] + 0.01,
+     labels = "San",
+     cex = 1.15,
+     col = "forestgreen")
+
+text(y[sc_idx],x[sc_idx] + 0.006,
+     labels = "Francisco",
      cex = 1.15,
      col = "forestgreen")
 ```
@@ -402,8 +411,13 @@ segments(x0 = y, y0 = 0,
 # label only San Francisco
 sc_idx <- which(names(x) == "San Francisco")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.06,
-     labels = "San Francisco",
+text(y[sc_idx],x[sc_idx] + 0.09,
+     labels = "San",
+     cex = 1.15,
+     col = "forestgreen")
+
+text(y[sc_idx],x[sc_idx] + 0.05,
+     labels = "Francisco",
      cex = 1.15,
      col = "forestgreen")
 
@@ -428,8 +442,13 @@ segments(x0 = y, y0 = 0,
 # label only San Francisco
 sc_idx <- which(names(x) == "San Francisco")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.02,
-     labels = "San Francisco",
+text(y[sc_idx],x[sc_idx] + 0.018,
+     labels = "San",
+     cex = 1.15,
+     col = "forestgreen")
+
+text(y[sc_idx],x[sc_idx] + 0.01,
+     labels = "Francisco",
      cex = 1.15,
      col = "forestgreen")
 ```
@@ -464,8 +483,13 @@ segments(x0 = y, y0 = 0,
 # label only San Francisco
 sc_idx <- which(names(x) == "San Francisco")
 
-text(y[sc_idx],x[sc_idx] + 0.085,
-     labels = "San Francisco",
+text(y[sc_idx],x[sc_idx] + 0.09,
+     labels = "San",
+     cex = 1.15,
+     col = "forestgreen")
+
+text(y[sc_idx],x[sc_idx] + 0.05,
+     labels = "Francisco",
      cex = 1.15,
      col = "forestgreen")
 
@@ -490,8 +514,13 @@ segments(x0 = y, y0 = 0,
 # label only San Francisco
 sc_idx <- which(names(x) == "San Francisco")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.015,
-     labels = "San Francisco",
+text(y[sc_idx],x[sc_idx] + 0.0135,
+     labels = "San",
+     cex = 1.15,
+     col = "forestgreen")
+
+text(y[sc_idx],x[sc_idx] + 0.007,
+     labels = "Francisco",
      cex = 1.15,
      col = "forestgreen")
 ```
