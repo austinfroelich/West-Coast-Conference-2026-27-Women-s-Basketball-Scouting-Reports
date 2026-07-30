@@ -1,5 +1,5 @@
 ---
-title: '<span style=''color: #551A8B;''>University of Portland<br>Women''s Basketball
+title: '<span style=''color: #A020F0;''>University of Portland<br>Women''s Basketball
   Team Scouting Report</span>'
 author: ''
 output:
@@ -366,7 +366,7 @@ segments(x0 = y, y0 = 0,
 # label only Portland
 sc_idx <- which(names(x) == "Portland")
 
-text(y[sc_idx] - 0.3, x[sc_idx] + 0.005,
+text(y[sc_idx], x[sc_idx] + 0.005,
      labels = "Portland",
      cex = 1.15,
      col = "purple")
@@ -402,7 +402,7 @@ segments(x0 = y, y0 = 0,
 # label only Portland
 sc_idx <- which(names(x) == "Portland")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.05,
+text(y[sc_idx] ,x[sc_idx] + 0.05,
      labels = "Portland",
      cex = 1.15,
      col = "purple")
@@ -428,7 +428,7 @@ segments(x0 = y, y0 = 0,
 # label only Portland
 sc_idx <- which(names(x) == "Portland")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.01,
+text(y[sc_idx],x[sc_idx] + 0.01,
      labels = "Portland",
      cex = 1.15,
      col = "purple")
@@ -464,7 +464,7 @@ segments(x0 = y, y0 = 0,
 # label only Portland
 sc_idx <- which(names(x) == "Portland")
 
-text(y[sc_idx],x[sc_idx] + 0.075,
+text(y[sc_idx],x[sc_idx] + 0.05,
      labels = "Portland",
      cex = 1.15,
      col = "purple")
@@ -490,7 +490,7 @@ segments(x0 = y, y0 = 0,
 # label only Portland
 sc_idx <- which(names(x) == "Portland")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.01,
+text(y[sc_idx],x[sc_idx] + 0.01,
      labels = "Portland",
      cex = 1.15,
      col = "purple")
