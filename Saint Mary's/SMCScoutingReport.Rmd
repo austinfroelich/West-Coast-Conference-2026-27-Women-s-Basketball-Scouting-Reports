@@ -338,7 +338,7 @@ segments(x0 = y, y0 = 0,
 # label only St. Mary's
 sc_idx <- which(names(x) == "St. Mary's (CA)")
 
-text(y[sc_idx],x[sc_idx] + 0.05,
+text(y[sc_idx] - 0.5,x[sc_idx] + 0.05,
      labels = "St. Mary's",
      cex = 1.15,
      col = "navyblue")
@@ -365,7 +365,7 @@ segments(x0 = y, y0 = 0,
 # label only St. Mary's
 sc_idx <- which(names(x) == "St. Mary's (CA)")
 
-text(y[sc_idx] - 0.3, x[sc_idx] + 0.005,
+text(y[sc_idx] - 0.5, x[sc_idx] + 0.008,
      labels = "St. Mary's",
      cex = 1.15,
      col = "navyblue")
@@ -401,7 +401,7 @@ segments(x0 = y, y0 = 0,
 # label only St. Mary's
 sc_idx <- which(names(x) == "St. Mary's (CA)")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.06,
+text(y[sc_idx] - 0.5,x[sc_idx] + 0.06,
      labels = "St. Mary's",
      cex = 1.15,
      col = "navyblue")
@@ -463,7 +463,7 @@ segments(x0 = y, y0 = 0,
 # label only St. Mary's
 sc_idx <- which(names(x) == "St. Mary's (CA)")
 
-text(y[sc_idx],x[sc_idx] + 0.085,
+text(y[sc_idx] - 0.5,x[sc_idx] + 0.06,
      labels = "St. Mary's",
      cex = 1.15,
      col = "navyblue")
