@@ -344,8 +344,8 @@ segments(x0 = y, y0 = 0,
 # label only Loyola Marymount
 sc_idx <- which(names(x) == "Loyola Marymount")
 
-text(y[sc_idx],x[sc_idx] + 0.05,
-     labels = "Loyola Marymount",
+text(y[sc_idx],x[sc_idx] + 0.04,
+     labels = "LMU",
      cex = 1.15,
      col = "dodgerblue2")
 
@@ -371,8 +371,8 @@ segments(x0 = y, y0 = 0,
 # label only Loyola Marymount
 sc_idx <- which(names(x) == "Loyola Marymount")
 
-text(y[sc_idx] - 0.3, x[sc_idx] + 0.005,
-     labels = "Loyola Marymount",
+text(y[sc_idx], x[sc_idx] + 0.008,
+     labels = "LMU",
      cex = 1.15,
      col = "dodgerblue2")
 ```
@@ -407,8 +407,8 @@ segments(x0 = y, y0 = 0,
 # label only Loyola Marymount
 sc_idx <- which(names(x) == "Loyola Marymount")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.06,
-     labels = "Loyola Marymount",
+text(y[sc_idx],x[sc_idx] + 0.06,
+     labels = "LMU",
      cex = 1.15,
      col = "dodgerblue2")
 
@@ -433,8 +433,8 @@ segments(x0 = y, y0 = 0,
 # label only Loyola Marymount
 sc_idx <- which(names(x) == "Loyola Marymount")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.02,
-     labels = "Loyola Marymount",
+text(y[sc_idx],x[sc_idx] + 0.0125,
+     labels = "LMU",
      cex = 1.15,
      col = "dodgerblue2")
 ```
@@ -470,8 +470,8 @@ segments(x0 = y, y0 = 0,
 # label only Loyola Marymount
 sc_idx <- which(names(x) == "Loyola Marymount")
 
-text(y[sc_idx],x[sc_idx] + 0.085,
-     labels = "Loyola Marymount",
+text(y[sc_idx],x[sc_idx] + 0.07,
+     labels = "LMU",
      cex = 1.15,
      col = "dodgerblue2")
 
@@ -496,8 +496,8 @@ segments(x0 = y, y0 = 0,
 # label only Loyola Marymount
 sc_idx <- which(names(x) == "Loyola Marymount")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.015,
-     labels = "Loyola Marymount",
+text(y[sc_idx],x[sc_idx] + 0.01,
+     labels = "LMU",
      cex = 1.15,
      col = "dodgerblue2")
 ```
