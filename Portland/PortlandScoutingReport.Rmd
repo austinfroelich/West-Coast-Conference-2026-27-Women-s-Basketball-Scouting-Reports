@@ -64,6 +64,9 @@ $\\$
 
 - Spreads the workload; no player dominates scoring, assisting, or rebounding
 
+- Strong amount of returning production, other than 3-PT shooting
+(quarter of threes by departing Nicole Rodriguez)
+
 $\\$
 
 # Offense
@@ -496,7 +499,68 @@ text(y[sc_idx],x[sc_idx] + 0.01,
      col = "purple")
 ```
 
+# Returning Production
 
+$\\$
+
+**Assessment:** Lost some 3 point production (notably Nicole Rodriguez, 25 percent of team 3's); otherwise, very
+strong amount of returning production
+
+```{r, echo = FALSE}
+wcc_players_por = subset(wcc_players, 
+                        wcc_players$Team == "Portland")
+
+newplayers_por = c("Goundo Diakite Bayo",
+               "Sara Mangan",
+               "Dyani Ananiev",
+               "Florence Dallow",
+               "Pahlyss Hokianga",
+               "Aubrey Herrin",
+               "Tiffany Barbosa",
+               "Jada Kennedy",
+               "Carly Gonzalez",
+               "Brynn Smith",
+               "Caitlin Monahan",
+               "Lainey Spear",
+               "Rhyan Mogel",
+               "Maddie Angus",
+               "Ella Zimmerman",
+               "Julia Dalan")
+
+wcc_players_por$returner = wcc_players_por$Player %in% newplayers_por
+
+pl_return = mean(wcc_players_por$returner)
+
+min_return = sum(wcc_players_por$MP[wcc_players_por$returner]) / 
+  sum(wcc_players_por$MP)
+
+pts_return = sum(wcc_players_por$PTS[wcc_players_por$returner]) / 
+  sum(wcc_players_por$PTS)
+
+ast_return = sum(wcc_players_por$AST[wcc_players_por$returner]) / 
+  sum(wcc_players_por$AST)
+
+thp_return = sum(wcc_players_por$X3P[wcc_players_por$returner]) / 
+  sum(wcc_players_por$X3P)
+
+drb_return = sum(wcc_players_por$DRB[wcc_players_por$returner]) / 
+  sum(wcc_players_por$DRB)
+
+
+
+barplot(c(pl_return, min_return, 
+          pts_return, ast_return,
+          thp_return, drb_return),
+        col = "purple",
+        ylim = c(0, 1),
+        ylab = "Proportion",
+        main = "Proportion of Returning Production from 2025-26",
+        names.arg = c("Players", "Minutes", "Points", "Assists", 
+                      "3-FG", "DRBs"))
+box(bty = "l")
+abline(h = 0.6, lty = 2)
+abline(h = 0.8, lty = 2)
+```
 
 # Appendix
 
