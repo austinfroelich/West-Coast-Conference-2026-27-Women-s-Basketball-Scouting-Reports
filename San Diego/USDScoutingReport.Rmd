@@ -339,7 +339,7 @@ segments(x0 = y, y0 = 0,
 # label only San Diego
 sc_idx <- which(names(x) == "San Diego")
 
-text(y[sc_idx],x[sc_idx] + 0.05,
+text(y[sc_idx],x[sc_idx] + 0.04,
      labels = "San Diego",
      cex = 1.15,
      col = "steelblue1")
@@ -366,7 +366,7 @@ segments(x0 = y, y0 = 0,
 # label only San Diego
 sc_idx <- which(names(x) == "San Diego")
 
-text(y[sc_idx] - 0.3, x[sc_idx] + 0.005,
+text(y[sc_idx], x[sc_idx] + 0.007,
      labels = "San Diego",
      cex = 1.15,
      col = "steelblue1")
@@ -402,7 +402,7 @@ segments(x0 = y, y0 = 0,
 # label only San Diego
 sc_idx <- which(names(x) == "San Diego")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.05,
+text(y[sc_idx],x[sc_idx] + 0.05,
      labels = "San Diego",
      cex = 1.15,
      col = "steelblue1")
@@ -428,7 +428,7 @@ segments(x0 = y, y0 = 0,
 # label only San Diego
 sc_idx <- which(names(x) == "San Diego")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.01,
+text(y[sc_idx],x[sc_idx] + 0.015,
      labels = "San Diego",
      cex = 1.15,
      col = "steelblue1")
@@ -465,7 +465,7 @@ segments(x0 = y, y0 = 0,
 # label only San Diego
 sc_idx <- which(names(x) == "San Diego")
 
-text(y[sc_idx],x[sc_idx] + 0.075,
+text(y[sc_idx],x[sc_idx] + 0.06,
      labels = "San Diego",
      cex = 1.15,
      col = "steelblue1")
@@ -491,7 +491,7 @@ segments(x0 = y, y0 = 0,
 # label only San Diego
 sc_idx <- which(names(x) == "San Diego")
 
-text(y[sc_idx] - 0.2,x[sc_idx] + 0.01,
+text(y[sc_idx],x[sc_idx] + 0.008,
      labels = "San Diego",
      cex = 1.15,
      col = "steelblue1")
