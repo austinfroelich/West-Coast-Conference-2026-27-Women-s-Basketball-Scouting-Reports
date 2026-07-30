@@ -367,7 +367,7 @@ segments(x0 = y, y0 = 0,
 # label only Pacific
 sc_idx <- which(names(x) == "Pacific")
 
-text(y[sc_idx], x[sc_idx] + 0.005,
+text(y[sc_idx], x[sc_idx] + 0.008,
      labels = "Pacific",
      cex = 1.15,
      col = "darkorange")
@@ -429,7 +429,7 @@ segments(x0 = y, y0 = 0,
 # label only Pacific
 sc_idx <- which(names(x) == "Pacific")
 
-text(y[sc_idx],x[sc_idx] + 0.02,
+text(y[sc_idx],x[sc_idx] + 0.013,
      labels = "Pacific",
      cex = 1.15,
      col = "darkorange")
@@ -465,7 +465,7 @@ segments(x0 = y, y0 = 0,
 # label only Pacific
 sc_idx <- which(names(x) == "Pacific")
 
-text(y[sc_idx],x[sc_idx] + 0.085,
+text(y[sc_idx],x[sc_idx] + 0.06,
      labels = "Pacific",
      cex = 1.15,
      col = "darkorange")
@@ -491,7 +491,7 @@ segments(x0 = y, y0 = 0,
 # label only Pacific
 sc_idx <- which(names(x) == "Pacific")
 
-text(y[sc_idx],x[sc_idx] + 0.015,
+text(y[sc_idx],x[sc_idx] + 0.01,
      labels = "Pacific",
      cex = 1.15,
      col = "darkorange")
