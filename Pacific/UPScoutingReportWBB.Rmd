@@ -64,6 +64,8 @@ $\\$
 
 - Possible concentration of assisting, defensive rebounding
 
+- Very different team next year across all metrics
+
 $\\$
 
 # Offense
@@ -497,7 +499,65 @@ text(y[sc_idx],x[sc_idx] + 0.01,
      col = "darkorange")
 ```
 
+# Returning Production
 
+$//$
+
+**Assessment:** An all-around very different team from last year.
+
+```{r, echo = FALSE}
+library(mosaic)
+
+wcc_players_pac = subset(wcc_players, 
+                        wcc_players$Team == "Pacific")
+
+newplayers_pac = c("JoJo Nworie",
+                   "Bella Burcar",
+                   "Stella Szabo",
+                   "Liv Yergensen",
+                   "Sophia Mindermann",
+                   "Marina Radocaj",
+                   "Payton Montgomery",
+                   "Daria Nestorov",
+                   "Victoria Rivera",
+                   "Jordyn Dyer",
+                   "LaMiracle Lebon",
+                   "Yana Karamfilova")
+
+wcc_players_pac$returner = wcc_players_pac$Player %in% newplayers_pac
+
+pl_return = mean(wcc_players_pac$returner)
+
+min_return = sum(wcc_players_pac$MP[wcc_players_pac$returner]) / 
+  sum(wcc_players_pac$MP)
+
+pts_return = sum(wcc_players_pac$PTS[wcc_players_pac$returner]) / 
+  sum(wcc_players_pac$PTS)
+
+ast_return = sum(wcc_players_pac$AST[wcc_players_pac$returner]) / 
+  sum(wcc_players_pac$AST)
+
+thp_return = sum(wcc_players_pac$X3P[wcc_players_pac$returner]) / 
+  sum(wcc_players_pac$X3P)
+
+drb_return = sum(wcc_players_pac$DRB[wcc_players_pac$returner]) / 
+  sum(wcc_players_pac$DRB)
+
+
+
+barplot(c(pl_return, min_return, 
+          pts_return, ast_return,
+          thp_return, drb_return),
+        col = "darkorange",
+        ylim = c(0, 1),
+        ylab = "Proportion",
+        main = "Proportion of Returning Production from 2025-26",
+        names.arg = c("Players", "Minutes", "Points", "Assists", 
+                      "3-FG", "DRBs"))
+box(bty = "l")
+abline(h = 0.6, lty = 2)
+abline(h = 0.8, lty = 2)
+```
 
 # Appendix
 
