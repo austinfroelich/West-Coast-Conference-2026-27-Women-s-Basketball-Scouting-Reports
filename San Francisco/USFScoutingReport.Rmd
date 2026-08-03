@@ -64,6 +64,8 @@ $\\$
 
 - Even split of defensive rebounding
 
+- Very different team next year across all metrics
+
 $\\$
 
 # Offense
@@ -525,7 +527,64 @@ text(y[sc_idx],x[sc_idx] + 0.007,
      col = "forestgreen")
 ```
 
+# Returning Production
 
+**Assessment:** An all-around very different team from last year.
+
+```{r, echo = FALSE}
+library(mosaic)
+
+wcc_players_sf = subset(wcc_players, 
+                        wcc_players$Team == "San Francisco")
+
+newplayers_sf = c("Ines Babaya",
+                  "Noelia Mourino Freiria",
+                  "Jayda Queeley",
+                  "Belize Ibáñez Mengüç",
+                  "Emilie Beggs",
+                  "Aina Cargol",
+                  "Savi Mi",
+                  "Natasa Tausova",
+                  "Keiryn McGuff",
+                  "Paula Tirado",
+                  "Candy Edokpaigbe",
+                  "Lucia Yenes",
+                  "Maria Burliga")
+
+wcc_players_sf$returner = wcc_players_sf$Player %in% newplayers_sf
+
+pl_return = mean(wcc_players_sf$returner)
+
+min_return = sum(wcc_players_sf$MP[wcc_players_sf$returner]) / 
+  sum(wcc_players_sf$MP)
+
+pts_return = sum(wcc_players_sf$PTS[wcc_players_sf$returner]) / 
+  sum(wcc_players_sf$PTS)
+
+ast_return = sum(wcc_players_sf$AST[wcc_players_sf$returner]) / 
+  sum(wcc_players_sf$AST)
+
+thp_return = sum(wcc_players_sf$X3P[wcc_players_sf$returner]) / 
+  sum(wcc_players_sf$X3P)
+
+drb_return = sum(wcc_players_sf$DRB[wcc_players_sf$returner]) / 
+  sum(wcc_players_sf$DRB)
+
+
+
+barplot(c(pl_return, min_return, 
+          pts_return, ast_return,
+          thp_return, drb_return),
+        col = "gold3",
+        ylim = c(0, 1),
+        ylab = "Proportion",
+        main = "Proportion of Returning Production from 2025-26",
+        names.arg = c("Players", "Minutes", "Points", "Assists", 
+                      "3-FG", "DRBs"))
+box(bty = "l")
+abline(h = 0.6, lty = 2, col = "forestgreen")
+abline(h = 0.8, lty = 2, col = "forestgreen")
+```
 
 # Appendix
 
