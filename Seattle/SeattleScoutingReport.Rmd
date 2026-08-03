@@ -65,6 +65,8 @@ $\\$
 - **Scoring vacuum:** over 55% of team points
 scored by just three players, all of whom are gone
 
+- Complete teardown of roster YoY
+
 $\\$
 
 # Offense
@@ -500,7 +502,64 @@ text(y[sc_idx],x[sc_idx] + 0.01,
      col = "red2")
 ```
 
+# Returning Production
 
+**Assessment:** Essentially a completely new team on the court in 2026-27.
+
+```{r, echo = FALSE}
+library(mosaic)
+
+wcc_players_sea = subset(wcc_players, wcc_players$Team == "Seattle")
+
+newplayers_sea = c("Lindsay Biddle",
+                  "Sophie Buzzard",
+                  "Shelley Duchemin",
+                  "Gabriela Escorial Ferrero",
+                  "Claire Fraser",
+                  "Ayanna Jackson",
+                  "Cristina Jones",
+                  "Dylan Mogel",
+                  "Alanna Neale",
+                  "Milana Nenadic",
+                  "Nari Powers",
+                  "Erin Sellers",
+                  "Sy Simanton",
+                  "Mahliya Wilson")
+
+wcc_players_sea$returner = wcc_players_sea$Player %in% newplayers_sea
+
+pl_return = mean(wcc_players_sea$returner)
+
+min_return = sum(wcc_players_sea$MP[wcc_players_sea$returner]) / 
+  sum(wcc_players_sea$MP)
+
+pts_return = sum(wcc_players_sea$PTS[wcc_players_sea$returner]) / 
+  sum(wcc_players_sea$PTS)
+
+ast_return = sum(wcc_players_sea$AST[wcc_players_sea$returner]) / 
+  sum(wcc_players_sea$AST)
+
+thp_return = sum(wcc_players_sea$X3P[wcc_players_sea$returner]) / 
+  sum(wcc_players_sea$X3P)
+
+drb_return = sum(wcc_players_sea$DRB[wcc_players_sea$returner]) / 
+  sum(wcc_players_sea$DRB)
+
+
+
+barplot(c(pl_return, min_return, 
+          pts_return, ast_return,
+          thp_return, drb_return),
+        col = "red2",
+        ylim = c(0, 1),
+        ylab = "Proportion",
+        main = "Proportion of Returning Production from 2025-26",
+        names.arg = c("Players", "Minutes", "Points", "Assists", 
+                      "3-FG", "DRBs"))
+box(bty = "l")
+abline(h = 0.6, lty = 2)
+abline(h = 0.8, lty = 2)
+```
 
 # Appendix
 
