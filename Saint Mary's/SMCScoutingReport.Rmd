@@ -63,6 +63,8 @@ $\\$
 
 - Evenly distributed production across all metrics
 
+- Very different team next year across all metrics
+
 $\\$
 
 # Offense
@@ -495,7 +497,59 @@ text(y[sc_idx] - 0.2,x[sc_idx] + 0.015,
      col = "navyblue")
 ```
 
+# Returning Production
 
+$//$
+
+**Assessment:** An all-around very different team from last year.
+
+```{r, echo = FALSE}
+library(mosaic)
+
+wcc_players_sm = subset(wcc_players, 
+                        wcc_players$Team == "St. Mary's (CA)")
+
+newplayers_sm = c("Charlece Ohiaeri",
+                  "Abigail Shoff",
+                  "Emily Foy",
+                  "Coco Urlacher",
+                  "Addi Wedin",
+                  "Ella Wedin")
+
+wcc_players_sm$returner = wcc_players_sm$Player %in% newplayers_sm
+
+pl_return = mean(wcc_players_sm$returner)
+
+min_return = sum(wcc_players_sm$MP[wcc_players_sm$returner]) / 
+  sum(wcc_players_sm$MP)
+
+pts_return = sum(wcc_players_sm$PTS[wcc_players_sm$returner]) / 
+  sum(wcc_players_sm$PTS)
+
+ast_return = sum(wcc_players_sm$AST[wcc_players_sm$returner]) / 
+  sum(wcc_players_sm$AST)
+
+thp_return = sum(wcc_players_sm$X3P[wcc_players_sm$returner]) / 
+  sum(wcc_players_sm$X3P)
+
+drb_return = sum(wcc_players_sm$DRB[wcc_players_sm$returner]) / 
+  sum(wcc_players_sm$DRB)
+
+
+
+barplot(c(pl_return, min_return, 
+          pts_return, ast_return,
+          thp_return, drb_return),
+        col = "navyblue",
+        ylim = c(0, 1),
+        ylab = "Proportion",
+        main = "Proportion of Returning Production from 2025-26",
+        names.arg = c("Players", "Minutes", "Points", "Assists", 
+                      "3-FG", "DRBs"))
+box(bty = "l")
+abline(h = 0.6, lty = 2, col = "red2")
+abline(h = 0.8, lty = 2, col = "red2")
+```
 
 # Appendix
 
