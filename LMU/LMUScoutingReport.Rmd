@@ -66,6 +66,8 @@ and draw fouls
 - **Defensive rebounding vacuum:** departure of Jess Lawson,
 who grabbed over a quarter of team's defensive boards
 
+- Very different team next year across all metrics
+
 $\\$
 
 # Offense
@@ -502,7 +504,66 @@ text(y[sc_idx],x[sc_idx] + 0.01,
      col = "dodgerblue2")
 ```
 
+# Returning Production
 
+$//$
+
+**Assessment:** An all-around very different team from last year.
+
+```{r, echo = FALSE}
+library(mosaic)
+
+wcc_players_lmu = subset(wcc_players, 
+                         wcc_players$Team == "Loyola Marymount")
+
+newplayers_lmu = c("Sarah Deng",
+                  "Mari Somvichian",
+                  "Danae Powell",
+                  "Allison Clarke",
+                  "Shawnee Nordstrom",
+                  "Ana Milanovic",
+                  "Shanayka Ismar",
+                  "Lova Lagerlid",
+                  "Erica Finney",
+                  "Ali'a Matavao",
+                  "Kayla Jones",
+                  "Janay Brantley",
+                  "Maya Hernandez")
+
+wcc_players_lmu$returner = wcc_players_lmu$Player %in% newplayers_lmu
+
+pl_return = mean(wcc_players_lmu$returner)
+
+min_return = sum(wcc_players_lmu$MP[wcc_players_lmu$returner]) / 
+  sum(wcc_players_lmu$MP)
+
+pts_return = sum(wcc_players_lmu$PTS[wcc_players_lmu$returner]) / 
+  sum(wcc_players_lmu$PTS)
+
+ast_return = sum(wcc_players_lmu$AST[wcc_players_lmu$returner]) / 
+  sum(wcc_players_lmu$AST)
+
+thp_return = sum(wcc_players_lmu$X3P[wcc_players_lmu$returner]) / 
+  sum(wcc_players_lmu$X3P)
+
+drb_return = sum(wcc_players_lmu$DRB[wcc_players_lmu$returner]) / 
+  sum(wcc_players_lmu$DRB)
+
+
+
+barplot(c(pl_return, min_return, 
+          pts_return, ast_return,
+          thp_return, drb_return),
+        col = "dodgerblue",
+        ylim = c(0, 1),
+        ylab = "Proportion",
+        main = "Proportion of Returning Production from 2025-26",
+        names.arg = c("Players", "Minutes", "Points", "Assists", 
+                      "3-FG", "DRBs"))
+box(bty = "l")
+abline(h = 0.6, lty = 2, col = "indianred3")
+abline(h = 0.8, lty = 2, col = "indianred3")
+```
 
 # Appendix
 
