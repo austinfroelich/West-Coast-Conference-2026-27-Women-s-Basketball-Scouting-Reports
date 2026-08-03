@@ -68,6 +68,9 @@ $\\$
 however,
 *none* are returning to team
 
+- Overall, very different team outside of
+some significant 3 point shooting return
+
 $\\$
 
 # Offense
@@ -507,7 +510,65 @@ text(y[sc_idx],x[sc_idx] + 0.01,
      col = "darkorange1")
 ```
 
+# Returning Production
 
+$\\$
+
+**Assessment:** An all-around very different team from last year,
+other than mostly returning 3-point production.
+
+```{r, echo = FALSE}
+library(mosaic)
+
+wcc_players_pp = subset(wcc_players, wcc_players$Team == "Pepperdine")
+
+newplayers_pp = c("Taija Sta. Maria",
+                  "Elli Guiney",
+                  "Evelyn Martyn",
+                  "Ilinca Belegante",
+                  "Quinn VanSickle",
+                  "Freya Bijkerk",
+                  "Keandra Koorits",
+                  "Zoe Shanahan",
+                  "Landrie Callahan",
+                  "Lina Falk",
+                  "Seleh Harmon",
+                  "Maggie Mendelson")
+
+wcc_players_pp$returner = wcc_players_pp$Player %in% newplayers_pp
+
+pl_return = mean(wcc_players_pp$returner)
+
+min_return = sum(wcc_players_pp$MP[wcc_players_pp$returner]) / 
+  sum(wcc_players_pp$MP)
+
+pts_return = sum(wcc_players_pp$PTS[wcc_players_pp$returner]) / 
+  sum(wcc_players_pp$PTS)
+
+ast_return = sum(wcc_players_pp$AST[wcc_players_pp$returner]) / 
+  sum(wcc_players_pp$AST)
+
+thp_return = sum(wcc_players_pp$X3P[wcc_players_pp$returner]) / 
+  sum(wcc_players_pp$X3P)
+
+drb_return = sum(wcc_players_pp$DRB[wcc_players_pp$returner]) / 
+  sum(wcc_players_pp$DRB)
+
+
+
+barplot(c(pl_return, min_return, 
+          pts_return, ast_return,
+          thp_return, drb_return),
+        col = "darkorange1",
+        ylim = c(0, 1),
+        ylab = "Proportion",
+        main = "Proportion of Returning Production from 2025-26",
+        names.arg = c("Players", "Minutes", "Points", "Assists", 
+                      "3-FG", "DRBs"))
+box(bty = "l")
+abline(h = 0.6, lty = 2, col = "navyblue")
+abline(h = 0.8, lty = 2, col = "navyblue")
+```
 
 # Appendix
 
