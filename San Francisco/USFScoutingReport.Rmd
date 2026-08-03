@@ -529,6 +529,8 @@ text(y[sc_idx],x[sc_idx] + 0.007,
 
 # Returning Production
 
+$\\$
+
 **Assessment:** An all-around very different team from last year.
 
 ```{r, echo = FALSE}
